@@ -40,18 +40,28 @@ print('Relation: $relation');
 void updateInfo(){
   print('update the person data ');
   print('update the name : $name');
-  name = stdin.readLineSync();
+
+  var name1 = stdin.readLineSync();
+    if (name1 ==''){
+      name = name;
+      print('this is name from class ($name)');
+    }
+    else{
+      name = name1;
+      print('this is name from class ($name)');
+    }
     print('update the job : $job');
   name = stdin.readLineSync();
     print('update the gender : $gender');
   name = stdin.readLineSync();
       while (true) {
-        
+        var ssn1;
       
-      if(ssn == ssn){
+      if(ssn != ssn1){
           try {
                         print('update the SSN : $ssn');
-                        ssn = int.parse(stdin.readLineSync()!);
+                        ssn1 = int.parse(stdin.readLineSync()!);
+                        ssn =ssn1;
                         
                 } catch (e) 
                 {
