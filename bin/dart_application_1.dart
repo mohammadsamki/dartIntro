@@ -54,14 +54,32 @@ void updateInfo(){
   name = stdin.readLineSync();
     print('update the gender : $gender');
   name = stdin.readLineSync();
-      while (true) {
+  // bool updatedSSN = false;
+  // bool updatedAge = false;
+  // bool updatedTall = false;
+  // bool updatedRelation = false;
         var ssn1;
+        var age1;
+        var tall1;
+        var relation1;
+
+      while (true) {
+
       
       if(ssn != ssn1){
           try {
                         print('update the SSN : $ssn');
-                        ssn1 = int.parse(stdin.readLineSync()!);
-                        ssn =ssn1;
+                        ssn1 = stdin.readLineSync()!;
+                        if (ssn1 ==''){
+                          ssn = ssn;
+                          ssn1= ssn;
+
+                          print('this is ssn from class ($ssn)');
+                        }
+                        else{
+                          ssn = int.parse(ssn1);
+                          print('this is ssn from class ($ssn)');
+                        }
                         
                 } catch (e) 
                 {
@@ -70,7 +88,7 @@ void updateInfo(){
                 }
       }
       
-      if(age == age){
+      if(age != age1){
       try {
               print('update the age : $age');
               age = int.parse(stdin.readLineSync()!);
@@ -81,7 +99,7 @@ void updateInfo(){
 
       }
       }
-  if(tall==tall){
+  if(tall!=tall1){
       try {
               print('update the tall : $tall');
               tall = double.parse(stdin.readLineSync()!);
@@ -92,7 +110,7 @@ void updateInfo(){
 
       }
   }
-  if(relation ==relation) {
+  if(relation !=relation1) {
       try {
               print('update the relation: $relation');
                relation = bool.parse(stdin.readLineSync()!);
